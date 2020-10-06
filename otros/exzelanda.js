@@ -1,5 +1,6 @@
 // programa que permite realizar multiplicaciones sin usar el operador matemático *
 //
+//
 
 const a = (x,y) => {
 
@@ -81,3 +82,23 @@ const letraRepetida = (str)=> {
 }
 
 console.log(letraRepetida('This is a a a a a'));
+// funcion que verifica que una cadena de texto es un palindromo
+
+
+const isPalindrome = str => {
+  console.log(str);
+  str = str.replace(/\s/g,'');
+  console.log(str);
+  const lowered = str.toLowerCase();
+  console.log(lowered);
+  const splitted = lowered.split('');
+  console.log(splitted);
+  const reversed = splitted.reverse();
+  console.log(reversed);
+  const joined = reversed.join('');
+  console.log(joined);
+
+  return lowered === joined
+}
+
+console.log(isPalindrome('Arriba la birra'));
