@@ -17,6 +17,8 @@ const unaSolaVez = once(hola);
 //unaSolaVez("HOLA CABALLO");
 //unaSolaVez("HOLA CABALLO");
 
+const otraVez = once(hola);
+console.log("once", otraVez, "typeof", typeof otraVez, "ejecucion", otraVez("CHAO"));
 const thisManyTimes = ( fn: Function , n: number ) => {
   let contador = 1;
   return (...argumentos : any) => {

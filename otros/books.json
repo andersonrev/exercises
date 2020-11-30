@@ -1,0 +1,244 @@
+[
+  {
+    "ISBN": "591-53-69946-410",
+    "titulo": "Sombra del Viento",
+    "authors": [
+      {
+        "name": "Holman",
+        "lastName": "Gutierrez"
+      }
+    ],
+    "pais": "EEUU",
+    "isNew": false,
+    "editorial": "ASIMILINE",
+    "urlbook": "http://urlbook.com/?",
+    "pages": 722,
+    "price": 81.74,
+    "registered": "2017-08-15"
+  },
+  {
+    "ISBN": "377-88-92011-10-1",
+    "titulo": "Harry Potter",
+    "authors": [
+      {
+        "name": "Mallory",
+        "lastName": "Holloway"
+      },
+      {
+        "name": "Ines",
+        "lastName": "Ewing"
+      },
+      {
+        "name": "Mack",
+        "lastName": "Clements"
+      }
+    ],
+    "pais": "Honduras",
+    "isNew": true,
+    "editorial": "AQUASURE",
+    "urlbook": "http://urlbook.com/?",
+    "pages": 554,
+    "price": 73.5,
+    "registered": "2006-05-07"
+  },
+  {
+    "ISBN": "369-125-47950-55",
+    "titulo": "IT",
+    "authors": [
+      {
+        "name": "Alston",
+        "lastName": "Herman"
+      },
+      {
+        "name": "Rogers",
+        "lastName": "Blackburn"
+      },
+      {
+        "name": "Frederick",
+        "lastName": "Patton"
+      }
+    ],
+    "pais": "American Samoa",
+    "isNew": false,
+    "editorial": "LIQUIDOC",
+    "urlbook": "http://urlbook.com/?",
+    "pages": 781,
+    "price": 85.04,
+    "registered": "2000-08-04"
+  },
+  {
+    "ISBN": "452-808-62798-38",
+    "titulo": "Sangre de Campeón",
+    "authors": [
+      {
+        "name": "Noble",
+        "lastName": "Atkins"
+      },
+      {
+        "name": "Harrington",
+        "lastName": "Foley"
+      },
+      {
+        "name": "Katie",
+        "lastName": "Boyer"
+      }
+    ],
+    "pais": "Georgia",
+    "isNew": true,
+    "editorial": "ELEMANTRA",
+    "urlbook": "http://urlbook.com/?",
+    "pages": 734,
+    "price": 20.45,
+    "registered": "2003-09-09"
+  },
+  {
+    "ISBN": "850-446-42582--2-3",
+    "titulo": "La profecía",
+    "authors": [
+      {
+        "name": "Lori",
+        "lastName": "Franco"
+      },
+      {
+        "name": "Coleman",
+        "lastName": "Mclaughlin"
+      },
+      {
+        "name": "Dionne",
+        "lastName": "Davenport"
+      }
+    ],
+    "pais": "Cape Verde",
+    "isNew": true,
+    "editorial": "JAMNATION",
+    "urlbook": "http://urlbook.com/?",
+    "pages": 802,
+    "price": 80.31,
+    "registered": "2004-01-21"
+  },
+  {
+    "ISBN": "755-102-58259-78",
+    "titulo": "El talisman",
+    "authors": [
+      {
+        "name": "Polly",
+        "lastName": "Gray"
+      },
+      {
+        "name": "Kaye",
+        "lastName": "Robles"
+      },
+      {
+        "name": "Klein",
+        "lastName": "Albert"
+      }
+    ],
+    "pais": "Niger",
+    "isNew": false,
+    "editorial": "BUZZMAKER",
+    "urlbook": "http://urlbook.com/?",
+    "pages": 822,
+    "price": 7.98,
+    "registered": "2013-09-01"
+  },
+  {
+    "ISBN": "635-104-77946--25",
+    "titulo": "DOn Quijote",
+    "authors": [
+      {
+        "name": "Boone",
+        "lastName": "Winters"
+      },
+      {
+        "name": "Edwina",
+        "lastName": "Floyd"
+      },
+      {
+        "name": "Tammi",
+        "lastName": "Gibbs"
+      }
+    ],
+    "pais": "French Southern Territories",
+    "isNew": false,
+    "editorial": "DOGTOWN",
+    "urlbook": "http://urlbook.com/?",
+    "pages": 558,
+    "price": 28.9,
+    "registered": "1999-01-18"
+  },
+  {
+    "ISBN": "368-544-95031-9-6",
+    "titulo": "WarCraft",
+    "authors": [
+      {
+        "name": "Leticia",
+        "lastName": "Wilkinson"
+      },
+      {
+        "name": "Middleton",
+        "lastName": "Harding"
+      },
+      {
+        "name": "Moody",
+        "lastName": "Roberson"
+      }
+    ],
+    "pais": "Madagascar",
+    "isNew": false,
+    "editorial": "ACCIDENCY",
+    "urlbook": "http://urlbook.com/?",
+    "pages": 641,
+    "price": 82.02,
+    "registered": "2006-09-22"
+  },
+  {
+    "ISBN": "831-321-57542-03",
+    "titulo": "Necronomicon",
+    "authors": [
+      {
+        "name": "Soto",
+        "lastName": "Chen"
+      },
+      {
+        "name": "Jewel",
+        "lastName": "Jackson"
+      },
+      {
+        "name": "Ila",
+        "lastName": "Pope"
+      }
+    ],
+    "pais": "Cyprus",
+    "isNew": false,
+    "editorial": "ACCUPHARM",
+    "urlbook": "http://urlbook.com/?",
+    "pages": 312,
+    "price": 33.09,
+    "registered": "2007-04-05"
+  },
+  {
+    "ISBN": "952-342-52202-43",
+    "titulo": "50 Sombras de Gray",
+    "authors": [
+      {
+        "name": "Agnes",
+        "lastName": "Patrick"
+      },
+      {
+        "name": "Ramsey",
+        "lastName": "Palmer"
+      },
+      {
+        "name": "Ora",
+        "lastName": "Alvarez"
+      }
+    ],
+    "pais": "British  Ocean Territory",
+    "isNew": false,
+    "editorial": "MUSIX",
+    "urlbook": "http://urlbook.com/?",
+    "pages": 247,
+    "price": 84.88,
+    "registered": "2015-01-30"
+  }
+]
