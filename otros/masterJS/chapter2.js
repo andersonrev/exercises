@@ -17,6 +17,7 @@ const inicialValor = (inicialValue=0)=>{
 const anderCounter = inicialValor()();
 console.log("aleluya", anderCounter);
 
+console.log("aleluya", inicialValor()(),inicialValor()());
 
 const myCounter = (function(initialValue = 0){
   let count = initialValue;
@@ -27,6 +28,7 @@ const myCounter = (function(initialValue = 0){
 })(77);
 
 
+console.log(myCounter());
 console.log(myCounter());
 myCounter();
 myCounter();
