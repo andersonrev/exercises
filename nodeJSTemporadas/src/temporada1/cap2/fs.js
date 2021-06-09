@@ -13,25 +13,26 @@ const { series, each } = require('async');
 
 
 const files = [
-  'callback.js',
-  'fs.js',
-  'callback_interval.js'
+  next => doFileOperations('callback.js',next),
+  next => doFileOperations('fs.js', next),
+  next => doFileOperations('callback_interval.js', next)
 ];
 
-const done = (err)=>{
+const done = (err, results)=>{
+  console.log(results);
   if (err){
     console.log(err.message);
     return;
   }
-  console.log(`Hemos procesado todos los archivos`);
+  console.log(`Hemos procesado ${results.length} los archivos`);
 }
 
-each(files, doFileOperations, done)
+series(files, done)
 
 // funcion asincrona
 function doFileOperations (filename, callback){
 
-  callback = once.strict(callback);
+  // callback = once.strict(callback);
 
   fs.readFile(filename, 'utf-8', onReadFile );
   // function Expresion
@@ -41,7 +42,7 @@ function doFileOperations (filename, callback){
       return;
     }
     console.log('listo !!!', filename);
-    callback(null, true);
+    callback(null, 'holi');
   }
 
 

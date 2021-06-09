@@ -1,32 +1,38 @@
-// callback es un funcion que se va a ejeutar despues de que un operacion asincrona ocurra.
-//
-
 'use strict'
-function sayHello (){
-  console.log("Hola mundo!")
-}
 
-setInterval(sayHello,300);
+const fs = require('fs');
+const path = require('path');
+const once = require('once');
+const after = require('after');
+const { series, each } = require('async');
 
-back.js','utf-8');
+
+// funcion sincrona
+// const file = fs.readFileSync('callback.js','utf-8');
 // console.log(file);
 
 
 const files = [
-  'callback.js',
-  'fs.js',
-  'callback_interval.js'
+  next => doFileOperations('callback.js',next),
+  next => doFileOperations('fs.js', next),
+  next => doFileOperations('callback_interval.js', next)
 ];
 
-const done = after(files.length, ()=>{
-  console.log(`Hemos procesado ${files.length} archivos`);
-})
+const done = (err, results)=>{
+  console.log(results);
+  if (err){
+    console.log(err.message);
+    return;
+  }
+  console.log(`Hemos procesado ${results.length} los archivos`);
+}
 
-files.forEach(file => doFileOperations(file,done));
+series(files, done)
+
 // funcion asincrona
 function doFileOperations (filename, callback){
 
-  callback = once(callback);
+  // callback = once.strict(callback);
 
   fs.readFile(filename, 'utf-8', onReadFile );
   // function Expresion
@@ -35,8 +41,8 @@ function doFileOperations (filename, callback){
       console.log(err.message);
       return;
     }
-    console.log('listo !!!');
-    callback();
+    console.log('listo !!!', filename);
+    callback(null, 'holi');
   }
 
 
@@ -48,26 +54,16 @@ function doFileOperations (filename, callback){
     const modified = data.replace(/setInterval/g, 'setInterval');
     fs.writeFile('callback_interval.js', modified, onWriteFile)
     // console.log(data);
-    callback();
   }
 }
+
+//for ( let file of files ){
+ // doFileOperations(file, done);
+// }
+// files.forEach(file => doFileOperations(file,done));
 
 /*
  * Best Practices
  * ------------------------------
  *  todas las funciones anónimas tienen un nombre.
- */
-
--------
- *  todas las funciones anónimas tienen un nombre.
- */
----------------
- *  todas las funciones anónimas tienen un nombre.
- */
-e.
- */
--
- *  todas las funciones anónimas tienen un nombre.
- */
-mbre.
  */
