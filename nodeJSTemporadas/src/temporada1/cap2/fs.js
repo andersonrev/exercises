@@ -3,19 +3,35 @@
 const fs = require('fs');
 const path = require('path');
 const once = require('once');
+const after = require('after');
+const { series, each } = require('async');
 
 
 // funcion sincrona
 // const file = fs.readFileSync('callback.js','utf-8');
 // console.log(file);
 
+
+const files = [
+  'callback.js',
+  'fs.js',
+  'callback_interval.js'
+];
+
+const done = (err)=>{
+  if (err){
+    console.log(err.message);
+    return;
+  }
+  console.log(`Hemos procesado todos los archivos`);
+}
+
+each(files, doFileOperations, done)
+
 // funcion asincrona
-
-
-
 function doFileOperations (filename, callback){
 
-  callback = once(callback);
+  callback = once.strict(callback);
 
   fs.readFile(filename, 'utf-8', onReadFile );
   // function Expresion
@@ -24,8 +40,8 @@ function doFileOperations (filename, callback){
       console.log(err.message);
       return;
     }
-    console.log('listo !!!');
-    callback();
+    console.log('listo !!!', filename);
+    callback(null, true);
   }
 
 
@@ -37,13 +53,14 @@ function doFileOperations (filename, callback){
     const modified = data.replace(/setTimeout/g, 'setInterval');
     fs.writeFile('callback_interval.js', modified, onWriteFile)
     // console.log(data);
-    callback();
   }
 }
 
-doFileOperations('callback.js', ()=>{
-  console.log('hemos terminado todo!!');
-});
+//for ( let file of files ){
+ // doFileOperations(file, done);
+// }
+// files.forEach(file => doFileOperations(file,done));
+
 /*
  * Best Practices
  * ------------------------------
