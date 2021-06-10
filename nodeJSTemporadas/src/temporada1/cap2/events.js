@@ -21,6 +21,7 @@ events.once('pong', function onPong(){
   events.removeListener('ping', onSecondPing);
   fs.readFile('noexit', err => events.emit('error', err));
   // events.emit('error', new Error('crash!!'));
+  
 })
 
 
@@ -31,3 +32,4 @@ events.on('error', err => {
 
 events.emit('ping');
 events.emit('ping');
+
