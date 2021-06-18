@@ -1,7 +1,7 @@
 'use strict'
 
 const fs = require('fs')
-const { promisify, callbackify} = require('util');
+const { promisify, callbackify } = require('util');
 
 console.log('start script');
 
@@ -35,17 +35,17 @@ Promise.all([
     /*fs.readFile(__filename),
     fs.readFile('gs,js'),
     */
-   p1,
-  // p1
+    p1,
+    // p1
 
 ])
-.then(
-    values => {
-        console.log(values);
-    }
-).catch(err => {
-    console.log('error en el ultimo catch,',err);
-});
+    .then(
+        values => {
+            //console.log(values);
+        }
+    ).catch(err => {
+        console.log('error en el ultimo catch,', err);
+    });
 
 /*Promise.race([
     fs.readFile(__filename),
@@ -55,6 +55,24 @@ Promise.all([
         console.log(values)
     }
 )*/
+
+
+function chainable() {
+    return new Promise((resolve, reject) => {
+        resolve('im first');
+    })
+}
+
+chainable()
+    .then( function onFirst (value){
+        console.log(value);
+        return Promise.resolve('Im last');
+    })
+    .then(
+        function onLast(value){
+            return Promise.reject(new Error('errorsito'));
+        }
+    );
 
 process.on('uncaughtException', err => {
     console.log(err)
