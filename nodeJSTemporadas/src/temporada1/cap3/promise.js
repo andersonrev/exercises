@@ -1,5 +1,5 @@
 'use strict'
-
+// las promesas se van a ejecutar antes (microtask) se ejecutan al mismo nivel de process.nextick, antes que otras cosas vayan a estar agendasdas en el eventloop
 const fs = require('fs')
 const { promisify, callbackify } = require('util');
 
